@@ -1,0 +1,38 @@
+<?php 
+	$lang['class_no'] = 'Class No';
+		$lang['admission_no'] = 'Admission No';
+		$lang['roll_no'] = 'Roll No';
+		$lang['session'] = 'Session';
+		$lang['class'] = 'Class';
+		$lang['section'] = 'Section';
+		$lang['student_name'] = 'Student Name';
+		$lang['islamiyat'] = 'Islamiyat';
+		$lang['urdu'] = 'Urdu';
+		$lang['english'] = 'English';
+		$lang['math'] = 'Math';
+		$lang['arabi'] = 'Arabi';
+		$lang['drawing'] = 'Drawing';
+		$lang['computer'] = 'Computer';
+		$lang['general_studies'] = 'General Studies';
+		$lang['history_geography'] = 'History Geography';
+		$lang['class_no'] = 'Class No';
+		$lang['admission_no'] = 'Admission No';
+		$lang['roll_no'] = 'Roll No';
+		$lang['session'] = 'Session';
+		$lang['class'] = 'Class';
+		$lang['section'] = 'Section';
+		$lang['student_name'] = 'Student Name';
+		$lang['islamiyat'] = 'Islamiyat';
+		$lang['urdu'] = 'Urdu';
+		$lang['english'] = 'English';
+		$lang['math'] = 'Math';
+		$lang['arabi'] = 'Arabi';
+		$lang['drawing'] = 'Drawing';
+		$lang['computer'] = 'Computer';
+		$lang['general_studies'] = 'General Studies';
+		$lang['history_geography'] = 'History Geography';
+		$lang['Results'] = 'Results';
+		$lang['Result Details'] = 'Result Details';$lang['Trashed Results'] = 'Trashed Results';
+		$lang['Add New Result'] = 'Add New Result';
+		$lang['Edit Result'] = 'Edit Result';
+		

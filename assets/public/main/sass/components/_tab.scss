@@ -1,0 +1,20 @@
+.vehicle-tab-nav {
+    
+    ul {
+        text-align: center;
+        border: 0;
+        margin-bottom: 50px;
+        justify-content: center;
+
+        a {
+            padding: 10px;
+            display: inline-block;
+            color: $body-font-color;
+
+            &.active {
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+    }
+}

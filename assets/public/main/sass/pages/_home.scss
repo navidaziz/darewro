@@ -1,0 +1,135 @@
+.icons-div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    .single-icon {
+        height: 75px;
+        width: 75px;
+        border: 1px solid rgba($color: $background-dark-1, $alpha: .3);
+        text-align: center;
+        line-height: 70px;
+        border-radius: 50px;
+        background-color: $background-light-2;
+        position: relative;
+
+        @include respond('phone') {
+            display: none;
+        }
+
+        &:not(:last-child):after {
+            content: '';
+            position: absolute;
+            background-color: #ddd;
+            height: 1px;
+            width: 170px;
+            top: 50%;
+            left: 122%;
+        }
+    }
+}
+
+.how-work-text {
+    text-align: center;
+    word-break: break-all;
+    
+    @include respond('tab') {
+        margin-bottom: 20px;
+    }
+}
+
+.testimonial-area {
+    background-image: url(../../assets/images/home/bg3.jpg);
+    @include backgroundimg;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba($footer-bg, .8);
+        z-index: -1;
+    }
+
+
+    .div-title {
+        color: $white;
+    }
+}
+
+.about-us-area {
+
+    h4 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 50px;
+    }
+
+    .about-us-img {
+        margin-top: 70px;
+    }
+}
+
+.about-us-area {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        content: "";
+        background-image: url(../../assets/images/home/2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include respond('tab') {
+            display: none;
+        }
+    }
+}
+
+.download-qrcode {
+    text-align: right;
+
+    @include respond('tab') {
+        text-align: center;
+    }
+}
+
+.download-text {
+    margin-top: 55px;
+    margin-bottom: 50px;
+
+
+    @include respond('tab') {
+        text-align: center;
+    }
+}
+
+.download-buttons {
+
+    @include respond('tab') {
+        text-align: center;
+    }
+    
+    a{
+        display: inline-block;
+
+        @include respond ('tab') {
+            margin-bottom: 10px;
+        }
+        
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+}

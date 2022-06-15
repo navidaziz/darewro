@@ -1,0 +1,312 @@
+.header__upper {
+    background-color: $white;
+    padding: 15px 0;
+
+    @include respond('tab') {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    &--left {
+        display: flex;
+        padding-top: 5px;
+        align-items: center;
+
+        @include respond('tab') {
+            margin-bottom: 15px;
+          //  justify-content: space-around;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-right: 45px;
+
+            @include respond('phone') {
+                margin: 0;
+            }
+        }
+    }
+
+    &--right {
+        display: flex;
+        justify-content: flex-end;
+
+        @include respond('tab') {
+           // justify-content: center;
+           justify-content: space-evenly;
+        }
+
+        .navigation {
+            ul {
+                margin: 0;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                display: block;
+                color: $background-dark-1;
+                padding: 11px;
+                transition: all .1s;
+
+                &:hover {
+                    color: $theme-color;
+                }
+
+                @include respond('phone') {
+                    padding: 2px;
+                }
+            }
+        }
+
+        .button {
+            @include respond('phone') {
+               // padding: 4px 6px;
+               // width: 120px;
+               padding: 8px 12px;
+               width: 128px;
+               font-size: 11px;
+            }
+        }
+    }
+}
+
+.header__lower {
+    background-color: $footer-bg;
+
+    .navbar {
+      //  padding: 0;
+    }
+    .navbar-nav .dropdown-menu{
+        background-color: $copyright-bg;
+    }
+    .dropdown-item{
+        color: $white;
+        &:focus, &:hover {
+            color: $white;
+            background: $copyright-bg;
+        }
+    }
+    .navbar-dark .navbar-nav .nav-item.active .nav-link {
+        color: $theme-color;
+        border-color: $theme-color;
+        background-color: $copyright-bg;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: $white;
+        padding: 17px 20px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-color: $theme-color;
+            background-color: $copyright-bg;
+
+            i {
+                color: $theme-color;
+            }
+        }
+
+        i, img {
+            margin-right: 10px;
+        }
+    }
+
+    .button {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+    @include respond('phone') {
+        margin-top: 9px;
+        .navbar-nav{
+            margin-top:10px;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            i{
+            padding:0px 5px;
+        }
+    }
+
+    }
+}
+
+.search-bar {
+    position: relative;
+    width: 400px;
+
+    @include respond('phone-land') {
+       // width: 30px;
+       width: 182px;
+        line-height: 32px;
+    }
+
+    .form {
+        display: flex;
+
+        @include respond('phone-land') {
+           // display: none;
+        }
+
+        .button {
+            padding: 14px 19px;
+        }
+    }
+
+    .form-control {
+        background-color:#F5F5F4;
+        margin: 0;
+        padding-left: 30px;
+        color: $body-font-color;
+        font-size: 12px;
+    }
+
+    .icon {
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        line-height: 43px;
+        left: 10px;
+        top: 0;
+    }
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 52px;
+    z-index: 9;
+}
+
+header {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    @include respond('tab') {
+        position: relative;
+    }
+}
+
+header.theme-2 {
+
+    @include respond('phone') {
+
+        .media img {
+            margin: 0 !important;
+        }
+
+        .media-body {
+            display: none;
+        }
+    }
+
+    .header__upper {
+        padding: 0;
+    }
+
+    .navigation ul, .header__upper--left {
+        padding: 13px 0;
+
+        @include respond('phone') {
+            margin: 0;
+        }
+    }
+
+    .header__upper--right .navigation {
+        margin-right: 20px;
+
+        a {
+            padding: 11px 18px;
+
+            @include respond('desktop') {
+                padding: 11px;
+            }
+
+            @include respond('phone') {
+                padding: 6px 4px;
+            }
+        }
+    }
+
+    @include respond('phone') {
+        .navigation ul {
+            padding: 10px 5px;
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-toggle {
+        display: inline-block;
+        padding: 16px;
+        background-color: #F5F5F4;
+        cursor: pointer;
+
+        @include respond('phone') {
+            padding: 10px;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+    }
+}
+
+header.theme-3 {
+    padding: 24px 0;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+}
+
+.navigation-lower {
+
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        @include respond('tab') {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                padding: 15px 20px;
+                border: 1px solid transparent;
+                line-height: 1;
+                color: $background-dark-1;
+
+                @include respond('phone') {
+                    padding: 10px 12px;
+                }
+
+                &:hover {
+                    border-color: $background-dark-1;
+                }
+            }
+        }
+    }
+}

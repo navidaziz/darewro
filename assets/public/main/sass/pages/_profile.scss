@@ -1,0 +1,62 @@
+.personal-information-div {
+
+    .nav-tabs {
+
+        a {
+            font-size: 14px;
+            color: $body-font-color;
+            padding: 10px;
+        }
+    }
+
+    .personal-details {
+        background-color: $background-dark-3;
+        padding: 25px;
+    }
+}
+
+
+.passanger-name {
+    margin-bottom: 50px;
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    a {
+        color: $body-font-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include respond('phone') {
+        margin-bottom: 10px;
+    }
+}
+
+.personal-info {
+    margin-top: 50px;
+
+    a {
+        color: $body-font-color;
+    }
+
+    a.button {
+        color: $white;
+    }
+
+    .personal-details {
+        background-color: $background-dark-3;
+        padding: 30px;
+
+        @include respond('phone') {
+            padding: 15px;
+
+            textarea {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

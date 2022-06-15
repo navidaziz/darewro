@@ -1,0 +1,28 @@
+.counter-area {
+    background-image: url(../../assets/images/counter-bg.jpg);
+    @include backgroundimg;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        background-color: rgba($footer-bg, .8);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        // opacity: .2;
+    }
+}
+
+.counter-icon {
+    margin-bottom: 25px;
+}
+
+.single-counter {
+    h2, p {
+        color: $white;
+    }
+}

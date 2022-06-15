@@ -1,0 +1,44 @@
+.pagination {
+	justify-content: center;
+	margin-top: 20px;
+
+	@include respond('tab') {
+		flex-wrap: wrap;
+	}
+
+	.page-item:first-child .page-link, .page-item:last-child .page-link {
+		border-radius: 0;
+		width: 80px;
+		text-align: center;
+	}
+
+	.page-link {
+		display: block;
+		height: 50px;
+		width: 50px;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 0;
+		border: 1px solid rgba($footer-bg, .5);
+		margin: 0 8px;
+		color: $background-dark-1;
+
+		@include respond('tab') {
+			margin-bottom: 10px;
+		}
+
+		&.active {
+			background-color: $footer-bg;
+			color: $white;
+		}
+
+		&:hover {
+			background-color: $footer-bg;
+			color: $white;
+		}
+	}
+}
+
+// nav.page-navigation {
+// 	text-align: center;
+// }

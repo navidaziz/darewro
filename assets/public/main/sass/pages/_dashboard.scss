@@ -1,0 +1,159 @@
+.counter-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+
+    @include respond('phone') {
+        flex-wrap: wrap;
+        padding: 30px 0;
+    }
+}
+
+.single-counter-box {
+    flex-basis: 25%;
+    text-align: center;
+
+    @include respond('phone') {
+        flex-basis: 50%;
+    }
+}
+
+.vahicles-container {
+
+    .row {
+        margin-top: 30px;
+    }
+}
+
+.single-vehicle-container {
+    // border: 1px solid rgba($color: $background-dark-1, $alpha: .1);
+    // background-color: $background-dark-3;
+    // padding: 75px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.single-driver .card {
+    background-color: $background-dark-3;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+
+.tab-dashboard {
+    @include respond('phone') {
+        margin-top: 15px;
+    }
+}
+
+.rides-filter ul li {
+    list-style: none;
+    display: inline-block;
+
+    a {
+        display: inline-block;
+        color: $background-dark-1;
+        padding: 5px 15px;
+        border: 1px solid transparent;
+        transition: all .1s;
+
+        @include respond('phone') {
+            padding: 5px 10px;
+        }
+
+        &:hover {
+            border-color: rgba($color: $background-dark-1, $alpha: .3);
+        }
+    }
+}
+
+.tab-dashboard {
+
+    .tab-navigation {
+        margin-bottom: 45px;
+    }
+
+    .tab-navigation a {
+        display: inline-block;
+        padding: 15px;
+        border: 1px solid transparent;
+        border-bottom: none;
+        color: $body-font-color;
+
+        @include respond('phone') {
+            padding: 8px;
+        }
+    }
+
+    .tab-navigation a.active {
+        background-color: $background-dark-3;
+        color: $background-dark-1;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: 1px solid rgba($color: $background-dark-1, $alpha: .1);
+        border-bottom: none;
+    }
+}
+
+.tab-pane {
+
+    h4 {
+        margin-bottom: 30px;
+    }
+
+    .small-div-item {
+        background-color: $background-dark-3;
+    }
+
+    .small-div:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+
+.driver-dashboard-div {
+    .right-text {
+        text-align: right;
+
+        @include respond('phone') {
+            text-align: left;
+        }
+    }
+}
+
+.div-heading {
+    display: flex;
+
+    .heading-item {
+        flex-basis: 50%;
+        width: 100%;
+
+        @include respond('phone') {
+            &-1 {
+                flex-basis: 80%;
+            }
+
+            &-2 {
+                flex-basis: 20%;
+            }
+        }
+
+        &.right {
+            display: flex;
+            justify-content: flex-end;
+            color: $heading-font-color;
+        }
+    }
+}
+.media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.media-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}

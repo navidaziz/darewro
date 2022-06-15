@@ -1,0 +1,17 @@
+.total-earning-table {
+    background-color: $background-dark-3;
+    margin-bottom: 30px;
+
+    thead th:first-child {
+    	padding-left: 30px;
+    }
+
+    tbody tr th {
+        color: $heading-font-color;
+        padding-left: 30px;
+
+        small {
+            color: $body-font-color;
+        }
+    }
+}

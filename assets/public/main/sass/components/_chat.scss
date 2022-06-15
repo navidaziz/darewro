@@ -1,0 +1,115 @@
+.message-box {
+
+    .phone-icon {
+        padding: 3px 30px;
+
+        a {
+            color: $body-font-color;
+        }
+    }
+
+    .list-group-item {
+        border-bottom: rgba($background-dark-1, .2);
+    }
+
+    .form-control {
+        margin-bottom: 0;
+    }
+
+    .search-form {
+        position: relative;
+        // margin-bottom: 30px;
+
+        .form-control {
+            padding-left: 30px;
+        }
+
+        i {
+            position: absolute;
+            left: 9px;
+            top: 16px;
+        }
+    }
+
+    .list-group-item {
+        background-color: transparent;
+    }
+
+    .event-msg-left, .event-chat-ryt {
+        background-color: $background-dark-3;
+
+        @include respond('phone') {
+            margin-bottom: 20px;
+        }
+    }
+
+    .list-group-item.active {
+        z-index: 2;
+        color: #fff;
+        background-color: $theme-color;
+        color: $body-font-color;
+        border: none;
+    }
+
+    .chat-sender, .chat-reciver {
+        max-width: 400px;
+    }
+
+    .chat-reciver {
+        text-align: right;
+        margin-left: auto;
+
+        .media {
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        p {
+            display: inline-block;
+            padding: 10px;
+            box-shadow: 0 0px 4px 1px rgba($color: $black, $alpha: .1);
+            background-color: $white;
+            margin: 0;
+        }
+    }
+
+    .chat-sender {
+        text-align: left;
+
+        .media {
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        p {
+            display: inline-block;
+            padding: 10px;
+            background-color: #3D3E3E;
+            color: $white;
+            margin: 0;
+        }
+    }
+
+    .event-msg-left {
+
+        @include respond('desktop') {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-heading {
+            border-bottom: 1px solid rgba($background-dark-1, .2);
+
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+        .list-group-item:first-child {
+            padding: 0;
+        }
+
+        .list-group-item:first-child .sidebar-heading, .list-group-item:first-child .event-sideber-search {
+            padding: 20px;
+        }
+    }
+}

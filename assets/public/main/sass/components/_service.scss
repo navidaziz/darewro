@@ -1,0 +1,14 @@
+.single-service-item {
+    text-align: center;
+    padding: 45px 20px;
+    border: 1px solid rgba($color: $background-dark-1, $alpha: .2);
+    margin-bottom: 30px;
+
+    @include respond('phone-land') {
+        padding: 25px 20px;
+    }
+
+    h4 {
+        margin: 25px 0 15px;
+    }
+}

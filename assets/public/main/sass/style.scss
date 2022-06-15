@@ -1,0 +1,60 @@
+/*
+Template Name: CarrGo
+Developer: Studio Radiuzz
+Author: Shail   
+skype: shail_
+email: studioradiuzz@gmail.com
+
+
+Table of Contents
+
+1. Global
+    1.1. variable.scss
+    1.2. fonts.scss
+    1.3. reset.scss
+
+
+*/
+
+////////////////////
+// Global
+////////////////////
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/fonts";
+@import "base/reset";
+
+//Components
+@import "./components/button";
+@import "./components/slider";
+@import "./components/blog";
+@import "./components/team";
+@import "./components/account-access";
+@import "./components/service";
+@import "./components/package";
+@import "./components/form";
+@import "./components/table";
+@import "./components/chat";
+@import "./components/tab";
+@import "./components/map";
+@import "./components/navigation";
+@import "./components/breadcrumb";
+@import "./components/pagination";
+
+
+//Layouts
+@import "./layout/footer";
+@import "./layout/counter";
+//Menu
+
+
+
+//Pages
+@import "./pages/home";
+@import "./pages/address";
+@import "./pages/profile";
+@import "./pages/dashboard";
+@import "./pages/vehicle";
+

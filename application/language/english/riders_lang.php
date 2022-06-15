@@ -1,0 +1,29 @@
+<?php 
+	$lang['rider_name'] = 'Rider Name';
+		$lang['rider_image'] = 'Rider Image';
+		$lang['office_no'] = 'Office No';
+		$lang['personal_no'] = 'Personal No';
+		$lang['duty_start'] = 'Duty Start';
+		$lang['duty_end'] = 'Duty End';
+		$lang['is_available'] = 'Is Available';
+		$lang['is_absent'] = 'Is Absent';
+		$lang['ability_level'] = 'Ability Level';
+		$lang['comments'] = 'Comments';
+		$lang['rider_name'] = 'Rider Name';
+		$lang['rider_image'] = 'Rider Image';
+		$lang['office_no'] = 'Office No';
+		$lang['personal_no'] = 'Personal No';
+		$lang['duty_start'] = 'Duty Start';
+		$lang['duty_end'] = 'Duty End';
+		$lang['is_available'] = 'Is Available';
+		$lang['is_absent'] = 'Is Absent';
+		$lang['ability_level'] = 'Ability Level';
+		$lang['comments'] = 'Comments';
+		$lang['Riders'] = 'Riders';
+		$lang['Rider Details'] = 'Rider Details';
+		$lang['Trashed Riders'] = 'Trashed Riders';
+		$lang['Add New Rider'] = 'Add New Rider';
+		$lang['Edit Rider'] = 'Edit Rider';
+		$lang['rider_password'] = 'Rider Password';
+		$lang['rider_email'] = 'Rider Email';
+		

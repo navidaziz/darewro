@@ -1,0 +1,15 @@
+.single-team-member {
+    border: 1px solid rgba($color: $background-dark-1, $alpha: .2);
+    
+    @include respond('tab') {
+        margin-bottom: 20px;
+    }
+
+    .member-img img {
+        width: 100%;
+    }
+
+    .member-info {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,116 @@
+.form-control:focus {
+    box-shadow: none;
+    border-color: $theme-color;
+}
+
+.form-control {
+    margin-bottom: 30px;
+    border: 1px solid rgba($color: $background-dark-2, $alpha: .1);
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px;
+}
+
+textarea.form-control {
+    height: 145px;
+}
+
+.contact-form-div h2 {
+    margin-bottom: 50px;
+}
+
+.payment-options {
+    display: flex;
+    text-align: center;
+    border: 1px solid rgba($color: $background-dark-1, $alpha: .1);
+    margin-bottom: 30px;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .form-check-inline {
+        flex-basis: 33.33%;
+        margin: 0;
+    }
+
+    input:checked + label {
+        background-color: $theme-color;
+        color: $white;
+    }
+
+    label {
+        width: 100%;
+        display: block;
+        padding: 10px;
+
+        @include respond('phone') {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.select-car-wrapper {
+    margin-bottom: 50px;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+}
+
+.car-options {
+
+    .form-check-inline {
+        flex-direction: column;
+        width: 19%;
+        margin-right: 0;
+
+        @include respond('phone') {
+            width: 32%;
+            margin-bottom: 15px;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]:checked + label {
+        border-color: $theme-color;
+    }
+
+    label {
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        border: 1px solid rgba($color: $background-dark-1, $alpha: .1);
+        text-align: center;
+        display: inline-block;
+        line-height: 75px;
+    }
+}
+
+.destination {
+    position: relative;
+
+    .form-control {
+        padding: 10px  10px 10px 25px;
+    }
+
+    i {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+    }
+}
+
+.booking-form {
+
+    @include respond('tab') {
+        margin-bottom: 20px;
+    }
+}

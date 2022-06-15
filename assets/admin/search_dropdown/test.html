@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>flexselect tests</title>
+    <link rel="stylesheet" href="flexselect.css" type="text/css" media="screen" />
+    <style>
+      input { width: 400px; }
+      label, input { display: block; }
+      label { font-weight: bold; }
+      input, .flexselect_dropdown li { font-size: 1em; }
+      small { color: #999; }
+      .flexselect_selected small { color: #ddd; }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="liquidmetal.js" type="text/javascript"></script>
+    <script src="jquery.flexselect.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("select.special-flexselect").flexselect({ hideDropdownOnEmptyInput: true });
+        $("select.flexselect").flexselect();
+        $("input:text:enabled:first").focus();
+        $("form").submit(function() {
+          alert($(this).serialize());
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <label>Pick a Top 100 University or College in North America: <em>(Start typing...)</em></label>
+      <select class="special-flexselect" id="school" name="school" tabindex="1" data-placeholder="Start typing a school name...">
+        <option value=""></option>
+        <option value="1">Massachusetts Institute of Technology</option>
+        <option value="2">Harvard University</option>
+       
+              <option value="zebra">zebra</option>
+            </select>
+            <p>This is an absolute positioned div with an onchange handler on the original select element.</p>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Go" style="margin: 250px auto 0;" tabindex="4"/>
+    <form>
+  </body>
+</html>
