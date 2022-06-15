@@ -18,9 +18,9 @@
 					foreach ($slider_banners as $slider_banner) { ?>
 						<div class="single-slider-item">
 							<div class="hero-area-left">
-								<h1><?php echo $slider_banner->slider_banner_title; ?></h1>
-								<p><?php echo $slider_banner->slider_banner_sub_title; ?></p>
-								<p><?php echo $slider_banner->slider_banner_detail; ?></p>
+								<h1 style="color: black;"><?php echo $slider_banner->slider_banner_title; ?></h1>
+								<p style="color: black;"><?php echo $slider_banner->slider_banner_sub_title; ?></p>
+								<p style="color: black;"><?php echo $slider_banner->slider_banner_detail; ?></p>
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
 							<div class="hero-area-right">
@@ -58,7 +58,8 @@
 					<p>A delivery service right in your pocket. We have made it too easy for you to place your order and receive your delivery via a user-friendly mobile app.</p>
 				</div>
 				<div class="download-buttons">
-					<a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
+					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
+					 -->
 					<a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-2.png" alt=""></a>
 				</div>
 			</div>
