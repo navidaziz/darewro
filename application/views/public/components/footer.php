@@ -88,7 +88,7 @@
 						$count = 1;
 						foreach ($social_media_icons as $social_media_icon) : ?>
 							<li> <a style="color: rgb(255, 201, 10) !important; font-size:24px" target="new" href="<?php echo $social_media_icon->social_media_link; ?>">
-									<i class="<?php echo $social_media_icon->social_media_icon; ?>-square fa-2x"></i>
+									<i class="<?php echo $social_media_icon->social_media_icon; ?>"></i>
 								</a>
 							</li> <?php
 									$count++;
