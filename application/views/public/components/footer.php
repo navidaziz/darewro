@@ -59,8 +59,9 @@
 				<div class="col-lg-3 col-sm-6">
 					<h4>Download Mobile App</h4>
 					<div class="app-download-box">
-						<a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/google-play.jpg" alt="Google play"></a>
-						<a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/apple-store.jpg" alt="Apple store"></a>
+						<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/google-play.jpg" alt="Google play"></a>
+						<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/apple-store.jpg" alt="Apple store"></a>
+					 -->
 					</div>
 					<!-- <div class="cta-button">
               <a href="my-driver-dashboard.html" class="button button-dark">Become a Driver</a>

@@ -60,7 +60,7 @@
 				<div class="download-buttons">
 					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
 					 -->
-					<a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-2.png" alt=""></a>
+					<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-2.png" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 		</div>
 	</div>
 </div>
-
+<!-- 
 <div class="div-padding how-work-area">
 	<div class="container">
 		<div class="row">
@@ -192,7 +192,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 
