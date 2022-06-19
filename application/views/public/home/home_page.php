@@ -194,9 +194,6 @@
 	</div>
 </div>
 
-<div id="google-reviews">google reviews</div>
-
-
 
 
 <!-- <div class="about-us-area bg-2 div-padding"> -->
