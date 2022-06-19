@@ -115,8 +115,6 @@
 
 </footer>
 
-
-
 <!-- jQuery -->
 <script src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/plugins/common/common.min.js"></script>
 <script src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -127,7 +125,21 @@
 <script src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/plugins/gmap3/gmap3.min.js"></script>
 <!-- custom scripts -->
 <script src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/main/js/scripts.js"></script>
+<script>
+	$(document).ready(function($) {
+		$("#google-reviews").googlePlaces({
+			placeId: 'ChIJSdN3fhwX2TgREJaLQc4e-Ig' //Find placeID @: https://developers.google.com/places/place-id
+				,
+			render: ['reviews'],
+			min_rating: 4,
+			max_rows: 5,
+			rotateTime: false,
+			shorten_names: true
 
+
+		});
+	});
+</script>
 
 </body>
 

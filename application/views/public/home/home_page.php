@@ -193,6 +193,12 @@
 		</div>
 	</div>
 </div>
+
+<div id="google-reviews">google reviews</div>
+
+
+
+
 <!-- <div class="about-us-area bg-2 div-padding"> -->
 <div class="bg-2 div-padding">
 	<?php
@@ -221,37 +227,31 @@
 
 
 
-<!-- <div class="div-padding testimonial-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <h2 class="div-title text-center">What about passanger says</h2>
-        </div>
-      </div>
+<div class="div-padding testimonial-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 offset-lg-3">
+				<h2 class="div-title text-center">Customers reviews</h2>
+			</div>
+		</div>
 
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="testimonial-carousel-1" class="testimonial-carousel owl-carousel">
-            <div class="single-testimonial-item text-center">
-              <img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/client-1.png" alt="" class="client-img">
-              <p class="testimonial-text">Quisque venenatis sit amet libero vel laoreet. Maecenas et eros a metus vestibulum rhoncus. Aenean varius tincidunt libero at egestas. Aliquam eget interdum enim. Nulla malesuada dolor at turpis blandit sagittis. </p>
-              <h4 class="client-name">John Doe</h4>
-              <p class="theme-color">Passanger</p>
-            </div>
-            <div class="single-testimonial-item text-center">
-              <img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/client-1.png" alt="" class="client-img">
-              <p class="testimonial-text">Quisque venenatis sit amet libero vel laoreet. Maecenas et eros a metus vestibulum rhoncus. Aenean varius tincidunt libero at egestas. Aliquam eget interdum enim. Nulla malesuada dolor at turpis blandit sagittis. </p>
-              <h4 class="client-name">John Doe</h4>
-              <p class="theme-color">Passanger</p>
-            </div>
-            <div class="single-testimonial-item text-center">
-              <img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/client-1.png" alt="" class="client-img">
-              <p class="testimonial-text">Quisque venenatis sit amet libero vel laoreet. Maecenas et eros a metus vestibulum rhoncus. Aenean varius tincidunt libero at egestas. Aliquam eget interdum enim. Nulla malesuada dolor at turpis blandit sagittis. </p>
-              <h4 class="client-name">John Doe</h4>
-              <p class="theme-color">Passanger</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+		<div class="row">
+			<div class="col-lg-12">
+				<?php $query = "SELECT * FROM `testimonials` WHERE status=1  order by `order` ASC";
+				$reviews = $this->db->query($query)->result();
+				foreach ($reviews as $review) {
+				?>
+					<div id="testimonial-carousel-1" class="testimonial-carousel owl-carousel">
+						<div class="single-testimonial-item text-center">
+							<img src="<?php echo base_url("assets/uploads/" . $review->image); ?>" alt="" class="client-img" style="width: 73px !important;">
+							<p class="testimonial-text"><?php echo $review->statement; ?></p>
+							<h4 class="client-name"><?php echo $review->client_name; ?></h4>
+							<p class="theme-color"><?php echo $review->client_designation; ?></p>
+						</div>
+					<?php } ?>
+
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
