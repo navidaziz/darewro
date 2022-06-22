@@ -80,7 +80,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<div class="single-blog-item" style="margin-bottom: 5px;">
 						<div class="blog-img">
-							<img style="width: 414px; height:270px" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
+							<img title="<?php echo $service->service_title; ?>" style="width: 414px; height:270px; object-fit:scale-down;" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
 						</div>
 						<div class="blog-text">
 							<h4 class="blog-heading"><?php echo $service->service_title; ?></h4>
@@ -110,7 +110,7 @@
 			<?php foreach ($why_choose_us as $why_choose_us) { ?>
 				<div class="col-lg-3 col-sm-6">
 					<div class="single-service-item">
-						<img class="service-icon" src="<?php echo base_url("assets/uploads/" . $why_choose_us->attachment); ?>" alt="service icon">
+						<img class="service-icon" title="<?php echo $why_choose_us->why_choose_us_title; ?>" style="object-fit:scale-down;" src="<?php echo base_url("assets/uploads/" . $why_choose_us->attachment); ?>" alt="service icon">
 						<h4><?php echo $why_choose_us->why_choose_us_title; ?></h4>
 						<p>
 							<!-- <details>
