@@ -80,7 +80,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<div class="single-blog-item" style="margin-bottom: 5px;">
 						<div class="blog-img">
-							<img title="<?php echo $service->service_title; ?>" style="width: 414px; height:270px; object-fit:scale-down;" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
+							<img title="<?php echo $service->service_title; ?>" style="width: 100%; height:270px; object-fit:scale-down;" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
 						</div>
 						<div class="blog-text">
 							<h4 class="blog-heading"><?php echo $service->service_title; ?></h4>
