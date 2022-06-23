@@ -72,6 +72,26 @@
 							<textarea class="form-control" name="text-content" id="text-content" placeholder="Text Content"></textarea>
 						</div>
 					</div>
+
+					<?php
+					$this->load->library('session');
+					$this->load->helper('captcha');
+					$config = array(
+						'img_url' => base_url() . 'image_for_captcha/',
+						'img_path' => 'image_for_captcha/',
+						'img_height' => 45,
+						'word_length' => 0,
+						'img_width' => '200',
+						'font_size' => 20
+					);
+					$captcha = create_captcha($config);
+					$this->session->unset_userdata('valuecaptchaCode');
+					$this->session->set_userdata('valuecaptchaCode', $captcha['word']);
+					echo $captcha['word'];
+
+					echo $captcha['image'];
+					?>
+
 					<button class="button button-dark tiny" type="submit">Send</button>
 				</form>
 			</div>
