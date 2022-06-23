@@ -45,11 +45,10 @@ class mail extends Public_Controller
 		// 	echo "error";
 		// }
 
-		$to = "navidaziz98@gamil.com";
+		$to = "info@darewro.com";
 		$subject = "My subject";
 		$txt = "Hello world!";
-		$headers = "From: info@darewro.com" . "\r\n" .
-			"CC: somebodyelse@example.com";
+		$headers = "From: navidaziz98@gmail.com" . "\r\n";
 
 		mail($to, $subject, $txt, $headers);
 	}
