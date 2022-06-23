@@ -31,18 +31,26 @@ class mail extends Public_Controller
 		set_error_handler("var_dump");
 		// The message
 
-		$message = "Line 1\r\nLine 2\r\nLine 3";
+		// $message = "Line 1\r\nLine 2\r\nLine 3";
 
-		// In case any of our lines are larger than 70 characters, we should use wordwrap()
+		// // In case any of our lines are larger than 70 characters, we should use wordwrap()
 
-		$message = wordwrap($message, 70, "\r\n");
+		// $message = wordwrap($message, 70, "\r\n");
 
-		// Send
+		// // Send
 
-		if (mail('navidaziz98@gmail.com', 'My Subject', $message)) {
-			echo "email send";
-		} else {
-			echo "error";
-		}
+		// if (mail('navidaziz98@gmail.com', 'My Subject', $message)) {
+		// 	echo "email send";
+		// } else {
+		// 	echo "error";
+		// }
+
+		$to = "navidaziz98@gamil.com";
+		$subject = "My subject";
+		$txt = "Hello world!";
+		$headers = "From: info@darewro.com" . "\r\n" .
+			"CC: somebodyelse@example.com";
+
+		mail($to, $subject, $txt, $headers);
 	}
 }
