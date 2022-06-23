@@ -27,7 +27,7 @@ class mail extends Public_Controller
 		// 		echo "error";
 		// 	}
 		$mail_to_send_to = "navidaziz98@gamil.com";
-		$from_email = "navidaziz98@gmail.com";
+		$from_email = "navidaziz99@yahoo.com";
 		$sendflag = 'send';
 		$name = 'navidaziz';
 		if ($sendflag == "send") {
