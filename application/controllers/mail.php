@@ -39,6 +39,10 @@ class mail extends Public_Controller
 
 		// Send
 
-		mail('navidaziz98@gmail.com', 'My Subject', $message);
+		if (mail('navidaziz98@gmail.com', 'My Subject', $message)) {
+			echo "email send";
+		} else {
+			echo "error";
+		}
 	}
 }
