@@ -36,7 +36,7 @@
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
 							<div class="hero-area-right" style="border: 1px solid red;">
-								<img style="border:1px solid black" width="805" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
+								<img style="border:1px solid black" width="100%" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
 							</div>
 						</div>
 					<?php } ?>
