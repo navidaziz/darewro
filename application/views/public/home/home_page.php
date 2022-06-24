@@ -79,34 +79,7 @@
 	</div>
 </div>
 
-<div class="div-padding blog-div">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 offset-lg-3">
-				<h2 class="div-title text-center">Our Services</h2>
-			</div>
-		</div>
 
-		<div class="row">
-			<?php foreach ($services as $service) { ?>
-				<div class="col-lg-4 col-sm-6">
-					<div class="single-blog-item" style="margin-bottom: 5px;">
-						<div class="blog-img">
-							<img title="<?php echo $service->service_title; ?>" style="height:270px;" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
-						</div>
-						<div class="blog-text">
-							<h4 class="blog-heading"><?php echo $service->service_title; ?></h4>
-							<p class="blog-time" style="min-height:110px">
-								<?php echo $service->service_summery; ?>
-							</p>
-							<!-- <a href="<?php echo base_url("service/view_service/" . $service->service_id); ?>" class="button button-dark tiny">Read More</a> -->
-						</div>
-					</div>
-				</div>
-			<?php } ?>
-		</div>
-	</div>
-</div>
 
 <div class="div-padding blog-div">
 	<div class="container">
