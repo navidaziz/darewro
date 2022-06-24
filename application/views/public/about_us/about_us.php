@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<h2 class="div-title">About us</h2>
+				<h2 class="">About us</h2>
 				<div class="about-us-text">
 					<h4><?php echo $about_us->about_us_page_title; ?></h4>
 					<p><?php echo $about_us->about_us_page_content; ?></p>

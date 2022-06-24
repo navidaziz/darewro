@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<h2 class="div-title text-center">Our Services</h2>
+				<h2 class="text-center">Our Services</h2>
 				<p class="text-center">We offer a wide range of services to our clients. We are here to help you with your business needs.</p>
 			</div>
 		</div>
