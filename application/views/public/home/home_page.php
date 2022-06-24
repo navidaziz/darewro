@@ -72,7 +72,7 @@
 				<div class="download-buttons">
 					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
 					 -->
-					<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img style="width:350px; padding:0px; margin:0px" src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/download_app.svg" alt=""></a>
+					<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img style="width:350px; padding:0px; margin:0px" src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/download_app.svg" alt="download android app"></a>
 				</div>
 			</div>
 		</div>

@@ -58,8 +58,8 @@
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<h4>Download Mobile App</h4>
-					<div class="app-download-box">
-						<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/google-play.jpg" alt="Google play"></a>
+					<div class="app-downl oad-box">
+						<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img style="width:100%; padding:0px; margin:0px" src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/download_app.svg" alt=""></a>
 						<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/icon/apple-store.jpg" alt="Apple store"></a>
 					 -->
 					</div>
