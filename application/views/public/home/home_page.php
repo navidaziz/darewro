@@ -252,7 +252,7 @@
 				?>
 					<div id="testimonial-carousel-1" class="testimonial-carousel owl-carousel">
 						<div class="single-testimonial-item text-center">
-							<img src="<?php echo base_url("assets/uploads/" . $review->image); ?>" alt="" class="client-img" style="width: 73px !important;">
+							<img src="<?php echo base_url("assets/uploads/" . $review->image); ?>" alt="" class="client-img" style="width: 150px !important;">
 							<p class="testimonial-text"><?php echo $review->statement; ?></p>
 							<h4 class="client-name"><?php echo $review->client_name; ?></h4>
 							<p class="theme-color"><?php echo $review->client_designation; ?></p>
