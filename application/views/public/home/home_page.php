@@ -127,7 +127,7 @@
 						<p>
 							<!-- <details>
                 <summary>Read More....</summary> -->
-						<p style="overflow: scroll; overflow-x: hidden; height: 200px; text-align:left; "><?php echo $why_choose_us->why_choose_us_detail; ?></p>
+						<p style="overflow: scroll; overflow-x: hidden; overflow-y: hidden; height: 200px; text-align:left; "><?php echo $why_choose_us->why_choose_us_detail; ?></p>
 						<!-- </details> -->
 						</p>
 					</div>
