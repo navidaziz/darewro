@@ -29,7 +29,7 @@
 		<div class="row">
 			<?php foreach ($services as $service) { ?>
 				<div class="col-lg-4 col-sm-6">
-					<div class="single-blog-item" style="margin-bottom: 5px; height:400px !important">
+					<div class="single-blog-item" style="margin-bottom: 5px; height:600px !important">
 						<div class="blog-img">
 							<img style="width: 414px; height:270px" src="<?php echo base_url("assets/uploads/" . $service->service_image); ?>" alt="">
 						</div>
