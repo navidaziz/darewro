@@ -5,8 +5,15 @@
 		background-color: transparent;
 		margin: 5px;
 		border-radius: 0px;
-		min-width: 40px;
 		border: 1px solid #3B3B3B;
+	}
+
+	.hero-area .hero-area-slider .owl-dots {
+		text-align: center;
+		position: absolute;
+		top: 113%;
+		display: block;
+		width: 100%;
 	}
 </style>
 
