@@ -35,7 +35,7 @@
 								<p style="color: black;"><?php echo $slider_banner->slider_banner_detail; ?></p>
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
-							<div class="hero-area-right">
+							<div class="hero-area-right" style="border: 1px solid red;">
 								<img width="805" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
 							</div>
 						</div>
