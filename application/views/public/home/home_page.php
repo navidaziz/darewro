@@ -92,7 +92,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
-				<h2 class="div-title text-center">Why Choose us</h2>
+				<h2 class="text-center">Why Choose Us</h2>
 
 			</div>
 			<p>Our story is straightforward; we believe in empowering our customers by enabling them to do more, feel better and live happier. We also believe that services delivery must be a hassle-free and exciting process. We aim to transform the everyday experiences of businesses on how to send and receive their goods and also empowering them by expanding horizon of customers for them. We are also empowering them via our state-of-the-art technology.</p>
@@ -122,7 +122,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
-				<h2 class="div-title text-center">How It Work</h2>
+				<h2 class="text-center">How It Work</h2>
 			</div>
 		</div>
 
@@ -220,7 +220,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
-				<h2 class="div-title text-center">Customers reviews</h2>
+				<h2 class="text-center">Customers reviews</h2>
 			</div>
 		</div>
 
