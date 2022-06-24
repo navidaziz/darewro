@@ -1,3 +1,15 @@
+<style>
+	.hero-area .hero-area-slider .owl-dots button.owl-dot {
+		width: 12px;
+		height: 12px;
+		background-color: transparent;
+		margin: 5px;
+		border-radius: 0px;
+		min-width: 40px;
+		border: 1px solid #3B3B3B;
+	}
+</style>
+
 <div class="hero-area hero-bg-light-yellow">
 	<div class="hero-blob">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="960" height="540" version="1.1">
@@ -24,7 +36,7 @@
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
 							<div class="hero-area-right">
-								<img width="805" height="363" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="">
+								<img width="805" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
 							</div>
 						</div>
 					<?php } ?>
@@ -47,7 +59,7 @@
 			<div class="col-lg-5">
 				<div class="download-qrcode">
 
-					<img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/mobile_app.jpeg" alt="">
+					<img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/mobile_app.png" alt="">
 					<!-- <img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/qr.png" alt=""> -->
 				</div>
 			</div>
@@ -60,7 +72,7 @@
 				<div class="download-buttons">
 					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
 					 -->
-					<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-2.png" alt=""></a>
+					<a target="new" href="https://play.google.com/store/apps/details?id=com.darewro.customer&hl=en"><img style="width:350px; padding:0px; margin:0px" src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/download_app.svg" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -115,7 +127,7 @@
 						<p>
 							<!-- <details>
                 <summary>Read More....</summary> -->
-						<p style="overflow: scroll; height: 150px; text-align:left; "><?php echo $why_choose_us->why_choose_us_detail; ?></p>
+						<p style="overflow: scroll; overflow-x: hidden; height: 200px; text-align:left; "><?php echo $why_choose_us->why_choose_us_detail; ?></p>
 						<!-- </details> -->
 						</p>
 					</div>

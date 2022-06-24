@@ -18,7 +18,7 @@ date_default_timezone_set('Asia/Karachi');
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-@define('ENVIRONMENT', 'production');
+@define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -28,10 +28,10 @@ date_default_timezone_set('Asia/Karachi');
  * By default development will show errors but testing and live will hide them.
  */
 
-if (defined('development')) {
+if (defined(ENVIRONMENT)) {
 	switch (ENVIRONMENT) {
 		case 'development':
-			error_reporting(14);
+
 			break;
 
 		case 'testing':
@@ -50,6 +50,10 @@ if (defined('development')) {
 			exit('The application environment is not set correctly.');
 	}
 }
+
+// ini_set('display_errors', '14');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
 
 /*
  *---------------------------------------------------------------
