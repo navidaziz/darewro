@@ -120,8 +120,8 @@
 
 		<div class="row">
 			<?php foreach ($why_choose_us as $why_choose_us) { ?>
-				<div class="col-lg-3 col-sm-6" style="height:600px !important">
-					<div class="single-service-item">
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-service-item" style="height:400px !important">
 						<img class="service-icon" title="<?php echo $why_choose_us->why_choose_us_title; ?>" style="height: 100px; object-fit:scale-down;" src="<?php echo base_url("assets/uploads/" . $why_choose_us->attachment); ?>" alt="service icon">
 						<h4><?php echo $why_choose_us->why_choose_us_title; ?></h4>
 						<p>
