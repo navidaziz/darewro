@@ -36,7 +36,7 @@
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
 							<div class="hero-area-right" style="border: 1px solid red;">
-								<img style="border:1px solid black; width:100%" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
+								<img style="width:450px" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
 							</div>
 						</div>
 					<?php } ?>
@@ -49,11 +49,7 @@
 
 <div class="download-div div-padding p-b-0">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 offset-lg-3">
-				<h2 class="div-title text-center">Download Our Mobile App</h2>
-			</div>
-		</div>
+
 
 		<div class="row">
 			<div class="col-lg-5">
@@ -66,8 +62,12 @@
 
 			<div class="col-lg-7">
 				<div class="download-text">
-					<h2>Download the darewro mobile application</h2>
-					<p>A delivery service right in your pocket. We have made it too easy for you to place your order and receive your delivery via a user-friendly mobile app.</p>
+					<h2>Download the Darewro Mobile App</h2>
+					<p>
+
+						'Darewro' has a feature rich app which offers an extensive range of services, being the best Delivery Service in Peshawar, we believe in taking ownership of our customers needs, wants and future requirements.
+
+					</p>
 				</div>
 				<div class="download-buttons">
 					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>
