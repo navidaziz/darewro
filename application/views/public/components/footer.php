@@ -16,7 +16,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-brand">
 						<a href="<?php echo site_url(); ?>">
-							<img id="logo" width="122" height="32" title="<?php echo $system_global_settings->system_title; ?> Logo" src="<?php echo base_url("assets/uploads/" . $system_global_settings->sytem_public_logo); ?>" />
+							<img id="logo" width="122" height="32" title="<?php echo $system_global_settings->system_title; ?> Logo" src="<?php echo base_url("assets/public/assets/images/home/logo_yellow.png"); ?>" />
 						</a>
 					</div>
 					<!-- <div class="footer-text">
@@ -51,9 +51,9 @@
 					<address class="company-address">
 						<p class="m-b-20"><?php echo $system_global_settings->address; ?></p>
 						<p class="m-b-8">Phone Number : <?php echo $system_global_settings->phone_number; ?></p>
-						<p class="m-b-8">Other Contacts : <?php echo $system_global_settings->mobile_number; ?></p>
+						<p class="m-b-8">WhatsApp : <?php echo $system_global_settings->mobile_number; ?></p>
 						<p class="m-b-8">Email Address : <?php echo $system_global_settings->email_address; ?></p>
-						<p class="m-b-8">Fax : <?php echo $system_global_settings->fax_number; ?></p>
+						
 					</address>
 				</div>
 				<div class="col-lg-3 col-sm-6">
