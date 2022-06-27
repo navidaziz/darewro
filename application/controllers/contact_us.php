@@ -14,7 +14,9 @@ class Contact_us extends Public_Controller
         $this->lang->load("contact_us_page", 'english');
         $this->lang->load("system", 'english');
         //$this->output->enable_profiler(TRUE);
+        $this->load->helper(array('form', 'url'));
 
+        $this->load->library('form_validation');
 
     }
     //---------------------------------------------------------------
@@ -61,6 +63,88 @@ class Contact_us extends Public_Controller
         $this->data["title"] = "Contact Us Page Details";
         $this->data["view"] = PUBLIC_DIR . "contact_us_page/view_contact_us_page";
         $this->load->view(PUBLIC_DIR . "layout", $this->data);
+    }
+    //-----------------------------------------------------
+
+    public function send_email(){
+        $validation_config = array(
+
+            array(
+                "field"  =>  "name",
+                "label"  =>  "Name",
+                "rules"  =>  "trim|required"
+            ),
+            array(
+                "field"  =>  "email",
+                "label"  =>  "Email",
+                "rules"  =>  "trim|required|valid_email"
+            ),
+            array(
+                "field"  =>  "message",
+                "label"  =>  "message",
+                "rules"  =>  "trim|required"
+            ),
+            array(
+                "field"  =>  "phone",
+                "label"  =>  "Phone",
+                "rules"  =>  "trim|required"
+            ),
+
+            array(
+                "field"  =>  "valuecaptchaCode",
+                "label"  =>  "Captcha Code",
+                "rules"  =>  "trim|required"
+            ),
+
+        );
+
+        $this->load->database();
+
+        //set and run the validation
+        $this->form_validation->set_rules($validation_config);
+
+        if ($this->form_validation->run() === TRUE) {
+            $inputs = array();
+
+            $input['name'] = $this->input->post('name');
+            $input['email'] = $this->input->post('email');
+            $input['phone'] = $this->input->post('phone');
+            $input['message'] = 
+            $formCaptcha = $this->input->post('valuecaptchaCode');
+            $sessCaptcha = $this->session->userdata('valuecaptchaCode');
+            if($sessCaptcha==$formCaptcha){
+                $to      = 'info@darewro.com';
+                $subject = $this->input->post('subject');
+                $message = $this->input->post('message');
+                $message .= "<br />Name: ".$this->input->post('name')."<br />";
+                $message .= "Contact No: ".$this->input->post('phone')."<br />";
+                $message .= "Email Address: ".$this->input->post('email')."<br />";
+                $headers = 'From: '.$this->input->post('email'). "\r\n" .
+                    'Reply-To: '.$this->input->post('email') . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
+
+                if(mail($to, $subject, $message, $headers)){
+                    echo '<div class="alert alert-success" role="alert">';
+                    echo "Thank you for getting in touch!";
+                    echo '</div>';
+                }else{
+                    echo '<div class="alert alert-danger" role="alert">';
+                    echo "Error while sending mail. try again later.";
+                    echo '</div>';
+                }
+            }else{
+                echo '<div class="alert alert-danger" role="alert">';
+                echo "Captcha code is not correct. try again with valid catcha code.";
+                echo '</div>';
+            }
+
+
+           
+        } else {
+            echo '<div class="alert alert-danger" role="alert">';
+            echo validation_errors();
+            echo '</div>';
+        }
     }
     //-----------------------------------------------------
 

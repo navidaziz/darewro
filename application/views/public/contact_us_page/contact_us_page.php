@@ -54,6 +54,7 @@
 			<div class="col-lg-6">
 				<form action="#">
 					<h2>Send us an Email</h2>
+					
 					<p style="color:black !important">For more information, complaint and feedback feel free to contact us </p>
 					<div class="row">
 						<div class="col-lg-6">
@@ -69,31 +70,110 @@
 							<input type="text" name="subject" id="subject" placeholder="Subject" class="form-control">
 						</div>
 						<div class="col-lg-12">
-							<textarea class="form-control" name="text-content" id="text-content" placeholder="Text Content"></textarea>
+							<textarea class="form-control" name="message" id="message" placeholder="Text Content"></textarea>
 						</div>
-					</div>
-
+					
+					<div class="col-lg-4">
 					<?php
 					$this->load->library('session');
 					$this->load->helper('captcha');
 					$config = array(
 						'img_url' => base_url() . 'image_for_captcha/',
 						'img_path' => 'image_for_captcha/',
-						'img_height' => 45,
-						'word_length' => 0,
-						'img_width' => '200',
-						'font_size' => 20
+						'font_path'    => './system/fonts/texb.ttf',
+						'img_width'    => '150',
+							'img_height' => 30,
+							'expiration' => 7200,
+							'colors'        => array(
+								'background' => array(255, 255, 255),
+								'border' => array(255, 255, 255),
+								'text' => array(0, 0, 0),
+								'grid' => array(255, 40, 40)
+)
 					);
+
+
+					
 					$captcha = create_captcha($config);
 					$this->session->unset_userdata('valuecaptchaCode');
 					$this->session->set_userdata('valuecaptchaCode', $captcha['word']);
-					echo $captcha['word'];
+					//echo $captcha['word'];
 
 					echo $captcha['image'];
-					?>
 
-					<button class="button button-dark tiny" type="submit">Send</button>
+
+					
+					?>
+</div>
+<div class="col-lg-4">
+	<input  type="text" name="valuecaptchaCode" id="valuecaptchaCode" placeholder="Captcha Code" class="form-control">
+					</div>
+					<div class="col-lg-4">
+					<button class="button button-dark tiny" onclick="submit_form()" type="button">Send</button>
+					<script>
+						function submit_form(){
+							var name = $("#name").val();
+							var email = $("#email").val();
+							var phone = $("#phone").val();
+							var subject = $("#subject").val();
+							var message = $("#message").val();
+							var valuecaptchaCode = $("#valuecaptchaCode").val();
+							var captchaCode = $("#captchaCode").val();
+							if(name == ""){
+								alert("Please enter your name");
+								return false;
+							}
+							if(email == ""){
+								alert("Please enter your email");
+								return false;
+							}
+							if(phone == ""){
+								alert("Please enter your phone");
+								return false;
+							}
+							if(subject == ""){
+								alert("Please enter your subject");
+								return false;
+							}
+							if(message == ""){
+								alert("Please enter your text content");
+								return false;
+							}
+							if(valuecaptchaCode == ""){
+								alert("Please enter your captcha code");
+								return false;
+							}
+
+							$.ajax({
+									type: 'POST',
+									url: "<?php echo base_url(); ?>contact_us/send_email",
+									data: {
+										name: name,
+										email: email,
+										phone: phone,
+										subject: subject,
+										message: message,
+										valuecaptchaCode: valuecaptchaCode,
+										captchaCode: captchaCode
+									},
+									success: function(data) {
+										$('#response').html(data);
+										//console.log(data);
+
+
+									},
+									error: function(error) {
+										alert("Error occur:" + error);
+									}
+									});
+							
+					}
+					</script>
+
 				</form>
+				</div>
+				</div>
+				<div id="response"></div>
 			</div>
 			<div class="col-lg-6">
 				<div class="contact-us-map">
