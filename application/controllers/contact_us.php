@@ -116,9 +116,9 @@ class Contact_us extends Public_Controller
                 $to      = 'info@darewro.com';
                 $subject = $this->input->post('subject');
                 $message = $this->input->post('message');
-                $message .= "<br />Name: ".$this->input->post('name')."<br />";
-                $message .= "Contact No: ".$this->input->post('phone')."<br />";
-                $message .= "Email Address: ".$this->input->post('email')."<br />";
+                $message .= "\r\nName: ".$this->input->post('name')."\r\n";
+                $message .= "Contact No: ".$this->input->post('phone')."\r\n";
+                $message .= "Email Address: ".$this->input->post('email')."\r\n";
                 $headers = 'From: '.$this->input->post('email'). "\r\n" .
                     'Reply-To: '.$this->input->post('email') . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
