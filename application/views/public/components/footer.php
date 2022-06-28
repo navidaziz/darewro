@@ -25,7 +25,7 @@
 					<div class="helpline">
 						<h4>Call For Delivery <span>Helpline</span></h4>
 						<h4>(+92) 091 724-1-724</h4>
-						<h4><span>Working Hours 9:00 AM - 02:00 AM</span></h4>
+						<h4><span>Working Hours 9:00 AM - 12:00 AM</span></h4>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
