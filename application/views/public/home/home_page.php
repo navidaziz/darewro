@@ -37,7 +37,7 @@
 					foreach ($slider_banners as $slider_banner) { ?>
 						<div class="single-slider-item">
 							<div class="hero-area-left">
-								<h2 style="color: black;"><?php echo $slider_banner->slider_banner_title; ?></h2>
+								<h1 style="color: black;"><?php echo $slider_banner->slider_banner_title; ?></h1>
 								<p style="color: black;"><?php echo $slider_banner->slider_banner_sub_title; ?></p>
 								<p style="color: black;"><?php echo $slider_banner->slider_banner_detail; ?></p>
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
