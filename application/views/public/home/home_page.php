@@ -17,9 +17,10 @@
 	}
 </style>
 
+
 <div class="hero-area hero-bg-light-yellow">
-<div class="hero-blob">
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="700" height="540" version="1.1">
+	<div class="hero-blob">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="960" height="540" version="1.1">
 			<g transform="translate(-19.958786364683874 -119.45603407032678)">
 				<path d="M354.6 -312.6C469.8 -239.5 580.4 -119.7 623.9 43.5C667.5 206.8 644 413.7 528.8 530.7C413.7 647.7 206.8 674.8 3 671.8C-200.8 668.8 -401.6 635.6 -506 518.6C-610.3 401.6 -618.2 200.8 -591.3 26.9C-564.4 -147.1 -502.8 -294.2 -398.5 -367.3C-294.2 -440.4 -147.1 -439.6 -13.7 -425.9C119.7 -412.2 239.5 -385.7 354.6 -312.6" fill="#f7bc00" />
 			</g>
@@ -36,25 +37,31 @@
 
 					foreach ($slider_banners as $slider_banner) { ?>
 						<div class="single-slider-item">
-							<!-- <div class="hero-area-left">  -->
-							<div class="col-lg-6">
+							<div class="hero-area-left">
+								<!-- <div class="col-lg-6"> -->
 								<h1 style="color: black;"><?php echo $slider_banner->slider_banner_title; ?></h1>
 								<p style="color: black;"><?php echo $slider_banner->slider_banner_sub_title; ?></p>
 								<p style="color: black;"><?php echo $slider_banner->slider_banner_detail; ?></p>
 								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
 							</div>
-							<!-- <div class="hero-area-right"> -->
-							<div class="col-lg-6">
-								<img style="width:100%" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
+							<div class="hero-area-right">
+								<!-- <div class="col-lg-6"> -->
+								<img style="width:777px; height:350px" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
 							</div>
 						</div>
 					<?php } ?>
+
 				</div>
+
+
+
 			</div>
 		</div>
 	</div>
 </div>
-</div>
+
+
+
 
 <div class="download-div div-padding p-b-0">
 	<div class="container">
