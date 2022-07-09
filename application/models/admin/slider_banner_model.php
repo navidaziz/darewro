@@ -15,6 +15,7 @@ class Slider_banner_model extends MY_Model
 
 	public function validate_form_data()
 	{
+		return true;
 		$validation_config = array(
 
 			// array(
