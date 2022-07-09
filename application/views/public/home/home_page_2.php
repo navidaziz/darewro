@@ -1,65 +1,209 @@
 <style>
-	/* .carousel-caption {
+	/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+	/* Carousel base class */
+	.carousel {
+		margin-bottom: 4rem;
+	}
+
+	/* Since positioning the image, we need to help out the caption */
+	.carousel-caption {
+		bottom: 3rem;
+		z-index: 10;
+	}
+
+	/* Declare heights because of positioning of img element */
+	.carousel-item {
+		height: 32rem;
+	}
+
+	.carousel-item>img {
 		position: absolute;
-		right: 15%;
-		bottom: 7.25rem;
-		left: 15%;
-		padding-top: 1.25rem;
-		padding-bottom: 1.25rem;
-		color: #fff;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		height: 32rem;
+	}
+
+
+	/* MARKETING CONTENT
+-------------------------------------------------- */
+
+	/* Center align the text within the three columns below the carousel */
+	.marketing .col-lg-4 {
+		margin-bottom: 1.5rem;
 		text-align: center;
-	} */
+	}
+
+	.marketing h2 {
+		font-weight: 400;
+	}
+
+	/* rtl:begin:ignore */
+	.marketing .col-lg-4 p {
+		margin-right: .75rem;
+		margin-left: .75rem;
+	}
+
+	/* rtl:end:ignore */
+
+
+	/* Featurettes
+------------------------- */
+
+	.featurette-divider {
+		margin: 5rem 0;
+		/* Space out the Bootstrap <hr> more */
+	}
+
+	/* Thin out the marketing headings */
+	.featurette-heading {
+		font-weight: 300;
+		line-height: 1;
+		/* rtl:remove */
+		letter-spacing: -.05rem;
+	}
+
+
+	/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+	@media (min-width: 40em) {
+
+		/* Bump up size of carousel content */
+		.carousel-caption p {
+			margin-bottom: 1.25rem;
+			font-size: 1.25rem;
+			line-height: 1.4;
+		}
+
+		.featurette-heading {
+			font-size: 50px;
+		}
+	}
+
+	@media (min-width: 62em) {
+		.featurette-heading {
+			margin-top: 7rem;
+		}
+	}
 </style>
+
+
+
+
+
+
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 	<div class="carousel-indicators">
-		<?php
-		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
-		$slider_banners = $this->db->query($query)->result();
-		$count = 0;
-		foreach ($slider_banners as $slider_banner) { ?>
-			<?php if ($count == 0) {
-			?>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $count; ?>" class="active" aria-label="<?php echo $slider_banner->slider_banner_title; ?>" aria-current="true"></button>
-			<?php } else { ?>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $count; ?>" aria-label="<?php echo $slider_banner->slider_banner_title; ?>" class=""></button>
-			<?php }
-			$count++;
-			?>
-		<?php } ?>
+		<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+		<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+		<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
 	</div>
 
 
-	<div class="carousel-inner">
-		<?php
-		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
-		$slider_banners = $this->db->query($query)->result();
-		$count = 1;
-		foreach ($slider_banners as $slider_banner) { ?>
-			<div class="carousel-item <?php if ($count == 1) {
-											echo "active";
-											$count++;
-										} ?>" style="height:580px">
-				<div style="background-color: ffcb13;">
-					<img src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>" class="d-block w-100" />
+	<div class="carousel-inner" style="height:585px">
 
-					<div class="carousel-caption d-none d-md-block">
-						<?php if ($slider_banner->slider_banner_title) { ?>
-							<h4><?php echo $slider_banner->slider_banner_title; ?></h4>
-						<?php } ?>
-						<?php if ($slider_banner->slider_banner_sub_title) { ?>
-							<h4><?php echo $slider_banner->slider_banner_sub_title; ?></h4>
-						<?php } ?>
-						<?php if ($slider_banner->slider_banner_detail) { ?>
-							<p><?php echo $slider_banner->slider_banner_detail; ?></p>
-						<?php } ?>
-					</div>
-				</div>
-
+		<div class="carousel-item active" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00006.jpg"); ?>" class="d-block w-100" />
 			</div>
-		<?php } ?>
 
+		</div>
 
+		<div class="carousel-item" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00005.jpg"); ?>" class="d-block w-100" />
+			</div>
 
+		</div>
+
+		<div class="carousel-item " style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00004.jpg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00003.jpg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00002.jpg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+
+		<div class="carousel-item" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/File 00001.jpg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+
+		<div class="carousel-item" style="background-color: #ffcb13; height:585px;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/img_6.svg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item" style="background-color: #ffcb13;">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/img_5.svg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item">
+			<div style="background-color: ffcb13;">
+				<img src="<?php echo site_url("sliders/img_3.svg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/final_svg.svg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/img_1.webp"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<div class="carousel-item ">
+			<div>
+				<img src="<?php echo site_url("sliders/img.svg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div>
+		<!-- <div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/my.jpg"); ?>" class="d-block w-100" />
+			</div>
+
+		</div> -->
+
+		<!-- <div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/slider_one.png"); ?>" class="d-block w-100" />
+			</div>
+
+		</div> -->
+		<!-- <div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/slider_two.jpeg"); ?>" style="width:100%" />
+			</div>
+		</div> -->
+		<!-- <div class="carousel-item">
+			<div>
+				<img src="<?php echo site_url("sliders/slider_three.jpeg"); ?>" style="width:100%" />
+			</div>
+		</div> -->
 	</div>
 	<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,20 +223,15 @@
 		<div class="row">
 			<div class="col-lg-5">
 				<div class="download-qrcode">
-
-					<img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/mobile_app.png" alt="">
+					dfasdfa
+					<img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/image1.jpg" alt="">
 					<!-- <img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/qr.png" alt=""> -->
 				</div>
 			</div>
 
 			<div class="col-lg-7">
 				<div class="download-text">
-					<h2>Download the Darewro Mobile App</h2>
-					<p>
-
-						'Darewro' has a feature rich app which offers an extensive range of services, being the best Delivery Service in Peshawar, we believe in taking ownership of our customers needs, wants and future requirements.
-
-					</p>
+					<img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/home/image1.jpg" alt="">
 				</div>
 				<div class="download-buttons">
 					<!-- <a href="#"><img src="<?php echo site_url("assets/" . PUBLIC_DIR); ?>/assets/images/download-1.png" alt=""></a>

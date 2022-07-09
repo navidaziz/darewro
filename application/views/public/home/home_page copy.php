@@ -1,75 +1,67 @@
 <style>
-	/* .carousel-caption {
-		position: absolute;
-		right: 15%;
-		bottom: 7.25rem;
-		left: 15%;
-		padding-top: 1.25rem;
-		padding-bottom: 1.25rem;
-		color: #fff;
+	.hero-area .hero-area-slider .owl-dots button.owl-dot {
+		width: 12px;
+		height: 12px;
+		background-color: transparent;
+		margin: 5px;
+		border-radius: 0px;
+		border: 1px solid #3B3B3B;
+	}
+
+	.hero-area .hero-area-slider .owl-dots {
 		text-align: center;
-	} */
+		position: absolute;
+		top: 113%;
+		display: block;
+		width: 100%;
+	}
 </style>
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-indicators">
-		<?php
-		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
-		$slider_banners = $this->db->query($query)->result();
-		$count = 0;
-		foreach ($slider_banners as $slider_banner) { ?>
-			<?php if ($count == 0) {
-			?>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $count; ?>" class="active" aria-label="<?php echo $slider_banner->slider_banner_title; ?>" aria-current="true"></button>
-			<?php } else { ?>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $count; ?>" aria-label="<?php echo $slider_banner->slider_banner_title; ?>" class=""></button>
-			<?php }
-			$count++;
-			?>
-		<?php } ?>
+
+
+<div class="hero-area hero-bg-light-yellow">
+	<div class="hero-blob">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="960" height="540" version="1.1">
+			<g transform="translate(-19.958786364683874 -119.45603407032678)">
+				<path d="M354.6 -312.6C469.8 -239.5 580.4 -119.7 623.9 43.5C667.5 206.8 644 413.7 528.8 530.7C413.7 647.7 206.8 674.8 3 671.8C-200.8 668.8 -401.6 635.6 -506 518.6C-610.3 401.6 -618.2 200.8 -591.3 26.9C-564.4 -147.1 -502.8 -294.2 -398.5 -367.3C-294.2 -440.4 -147.1 -439.6 -13.7 -425.9C119.7 -412.2 239.5 -385.7 354.6 -312.6" fill="#f7bc00" />
+			</g>
+		</svg>
 	</div>
 
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="hero-area-slider" class="hero-area-slider owl-carousel">
 
-	<div class="carousel-inner">
-		<?php
-		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
-		$slider_banners = $this->db->query($query)->result();
-		$count = 1;
-		foreach ($slider_banners as $slider_banner) { ?>
-			<div class="carousel-item <?php if ($count == 1) {
-											echo "active";
-											$count++;
-										} ?>" style="height:580px">
-				<div style="background-color: ffcb13;">
-					<img src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>" class="d-block w-100" />
+					<?php
+					$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
+					$slider_banners = $this->db->query($query)->result();
 
-					<div class="carousel-caption d-none d-md-block">
-						<?php if ($slider_banner->slider_banner_title) { ?>
-							<h4><?php echo $slider_banner->slider_banner_title; ?></h4>
-						<?php } ?>
-						<?php if ($slider_banner->slider_banner_sub_title) { ?>
-							<h4><?php echo $slider_banner->slider_banner_sub_title; ?></h4>
-						<?php } ?>
-						<?php if ($slider_banner->slider_banner_detail) { ?>
-							<p><?php echo $slider_banner->slider_banner_detail; ?></p>
-						<?php } ?>
-					</div>
+					foreach ($slider_banners as $slider_banner) { ?>
+						<div class="single-slider-item">
+							<div class="hero-area-left">
+								<!-- <div class="col-lg-6"> -->
+								<h1 style="color: black;"><?php echo $slider_banner->slider_banner_title; ?></h1>
+								<p style="color: black;"><?php echo $slider_banner->slider_banner_sub_title; ?></p>
+								<!-- <p style="color: black;"><?php echo $slider_banner->slider_banner_detail; ?></p> -->
+								<!-- <a href="signup.html" class="button button-dark big">Sign up Now</a> -->
+							</div>
+							<div class="hero-area-right">
+								<!-- <div class="col-lg-6"> -->
+								<img style="width:777px; height:350px" src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>">
+							</div>
+						</div>
+					<?php } ?>
+
 				</div>
 
+
+
 			</div>
-		<?php } ?>
-
-
-
+		</div>
 	</div>
-	<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Previous</span>
-	</button>
-	<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Next</span>
-	</button>
 </div>
+
+
 
 
 <div class="download-div div-padding p-b-0">
