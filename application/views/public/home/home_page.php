@@ -11,7 +11,7 @@
 	} */
 </style>
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-indicators">
+	<div class="carousel-indicators" style="background-color: #FFC90C;">
 		<?php
 		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
 		$slider_banners = $this->db->query($query)->result();
