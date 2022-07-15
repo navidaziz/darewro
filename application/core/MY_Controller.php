@@ -409,7 +409,7 @@ class MY_Controller extends CI_Controller
 		}
 
 		$ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-		$allowed = array('jpg', 'png', 'jpeg', 'bmp', 'gif');
+		$allowed = array('jpg', 'png', 'jpeg', 'bmp', 'gif', 'svg');
 
 		if (!in_array($ext, $allowed)) {
 			$this->form_validation->set_message("_filetype_validation", "$ext file type is not allowed");

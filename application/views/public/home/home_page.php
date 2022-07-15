@@ -11,7 +11,7 @@
 	} */
 </style>
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-indicators" style="background-color: #FFC90C;">
+	<div class="carousel-indicators">
 		<?php
 		$query = "SELECT * FROM `slider_banners` where `status` = 1 ORDER by `order` asc";
 		$slider_banners = $this->db->query($query)->result();
@@ -39,7 +39,7 @@
 											echo "active";
 											$count++;
 										} ?>" style="height:580px">
-				<div style="background-color: ffcb13;">
+				<div style="background-color: #FFC90C;">
 					<img src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>" class="d-block w-100" />
 
 					<div class="carousel-caption d-none d-md-block">
