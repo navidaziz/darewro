@@ -38,7 +38,7 @@
 			<div class="carousel-item <?php if ($count == 1) {
 											echo "active";
 											$count++;
-										} ?>" style="height:580px">
+										} ?>" style="width:100%">
 				<div style="background-color: #F6E302;">
 					<img src="<?php echo base_url("assets/uploads/" . $slider_banner->slider_banner_image); ?>" alt="<?php echo $slider_banner->slider_banner_title; ?>" class="d-block w-100" />
 
