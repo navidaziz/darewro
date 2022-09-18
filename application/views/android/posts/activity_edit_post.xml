@@ -1,0 +1,120 @@
+
+<TextView
+android:id="@+id/title_posts"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:text="Edit"
+android:textStyle="normal|bold"
+android:textAlignment="center"
+android:textColor="@android:color/background_light"
+android:layout_centerHorizontal="true"
+android:textSize="40dp"
+android:paddingTop="60dp" />
+		
+						<EditText
+						android:id="@+id/post_title"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Post Title"
+						android:inputType="textText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/posts"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/post_summary"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Post Summary"
+						android:inputType="textText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/post_title"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/post_detail"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Post Detail"
+						android:inputType="textText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/post_summary"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/post_type"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Post Type"
+						android:inputType="textEditText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/post_detail"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/image"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Image"
+						android:inputType="textEditText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/post_type"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/video_link"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Video Link"
+						android:inputType="textEditText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/image"
+						android:layout_marginTop="42dp"/>
+						
+						
+						<EditText
+						android:id="@+id/post_keywords"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Post Keywords"
+						android:inputType="textText"
+						android:ems="10"
+						android:singleLine="true"
+						android:maxLength="30"
+						android:padding="12dp"
+						android:layout_below="@+id/video_link"
+						android:layout_marginTop="42dp"/>
+						
+						
+<Button
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Update"
+android:id="@+id/btn_update_posts"
+android:background="@xml/btnselector"
+android:textColor="@android:color/background_light"
+/>
