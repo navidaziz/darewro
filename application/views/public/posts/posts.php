@@ -31,13 +31,13 @@
 				<div class="col-lg-4 col-sm-6">
 					<div class="single-blog-item" style="margin-bottom: 5px; height:auto !important">
 						<div class="blog-img">
-							<?php if ($post->image) { ?>
+							<?php if ($post->post_type == 'Image') { ?>
 								<img style="width: 414px; height:270px" src="<?php echo base_url("assets/uploads/" . $post->image); ?>" alt="">
-							<?php } else { ?>
-								<?php if ($post->video_link) { ?>
-									<iframe style="width: 414px; height:270px" src="<?php echo $post->video_link; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<?php } ?>
 							<?php } ?>
+							<?php if ($post->post_type == 'Video') { ?>
+								<iframe style="width: 414px; height:270px" src="<?php echo $post->video_link; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<?php } ?>
+
 						</div>
 						<div class="blog-text">
 							<h4 class="blog-heading"><?php echo $post->post_title; ?></h4>
