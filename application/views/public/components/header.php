@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<?php echo 'we are here'; ?>
 
 <head>
   <meta charset="utf-8">

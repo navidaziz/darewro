@@ -26,10 +26,11 @@ class Faqs extends Public_Controller
     public function index()
     {
 
-        $this->data['pageTitle'] = "FAQs";
-        $this->data['pageDescription'] = "Blog About";
-        $keywords = '';
-        $this->data["title"] = "FAQs";
+        $this->data['pageTitle'] = "FAQs - Darewro Delivery Service in Peshawar";
+        $this->data['pageDescription'] = "Find answers to frequently asked questions about Darewro, Peshawar's fast and reliable delivery service for food, groceries, parcels, and more.";
+        $this->data['keywords'] = "Darewro FAQs, delivery service Peshawar, home delivery Peshawar, cargo delivery, parcel pickup, food delivery, urgent delivery Peshawar";
+        $this->data['title'] = "FAQs";
+
         $this->data["view"] = PUBLIC_DIR . "faqs/faqs";
         $this->load->view(PUBLIC_DIR . "layout", $this->data);
     }
