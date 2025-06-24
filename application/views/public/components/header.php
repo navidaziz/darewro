@@ -117,10 +117,7 @@
                       <li class="nav-item"><a class="nav-link" href="<?php echo base_url("page/view_page/" . $menu_page->page_id); ?>"><?php echo $menu_page->page_name; ?></a></li>
                     <?php } ?>
                   <?php } ?>
-                  <li class="nav-item <?php if ($this->uri->segment(1) == 'faqs') {
-                                        echo "active";
-                                      } ?>"><a class="nav-link" href="<?php echo base_url("/faqs"); ?>">
-                      <i class="fab fa-blogger-b"></i> Blog</a></li>
+
 
                   <li class="nav-item <?php if ($this->uri->segment(1) == 'blogs') {
                                         echo "active";
@@ -142,6 +139,11 @@
                                           echo "active";
                                         } ?>"><a class="nav-link" href="<?php echo base_url("/contact_us"); ?>">
                       <i class="fas fa-map-marker-alt"></i>Contacts</a></li>
+
+                  <li class="nav-item <?php if ($this->uri->segment(1) == 'faqs') {
+                                        echo "active";
+                                      } ?>"><a class="nav-link" href="<?php echo base_url("/faqs"); ?>">
+                      <i class="fab fa-blogger-b"></i> FAQs</a></li>
 
 
                   <!-- <li class="nav-item dropdown active">
